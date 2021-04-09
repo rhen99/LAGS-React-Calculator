@@ -1,0 +1,59 @@
+.Buttons {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 1rem 0.4rem;
+  gap: 5px;
+}
+button {
+  width: 100%;
+  height: 100%;
+}
+button:active {
+  transform: scale(0.9);
+}
+button:focus {
+  outline: 1px solid #fff;
+}
+.Function {
+  font-size: 18px;
+  font-weight: 700;
+  background-color: #9494fa;
+  border: none;
+  color: #fff;
+}
+.Number {
+  font-size: 18px;
+  padding: 10px;
+  background-color: #494966;
+  color: #fff;
+  border: none;
+}
+.Operator {
+  font-size: 20px;
+  padding: 10px;
+  background-color: #5353eb;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+}
+.Equals {
+  padding: 10px;
+  background-color: #4aa14a;
+  color: #fff;
+  border: none;
+}
+.Button:nth-child(15) {
+  grid-row: 3 / 5;
+  grid-column: 5;
+}
+.Power {
+  color: #fff;
+  border: none;
+}
+.off {
+  background-color: #be0000;
+}
+.on {
+  background-color: #008000;
+}
