@@ -1,8 +1,10 @@
+
 import "./Screen.css"
-function Screen() {
+function Screen({displayNumber}) {
+    
     return (
         <div className="Screen">
-            <p className="Count">1</p>
+            <p className="Count">{displayNumber}</p>
         </div>
     )
 }

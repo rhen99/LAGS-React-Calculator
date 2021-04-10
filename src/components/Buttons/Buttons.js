@@ -1,65 +1,65 @@
 
 import './Buttons.css';
-function Buttons({isOn, power}) {
+function Buttons({isOn, power, printNumber, clearEntry, selectOperation, calculate}) {
     return (
         <div className="Buttons">
             <div className="Button">
-                <button className="Number">7</button>
+                <button className="Number" onClick={() => printNumber('7')}>7</button>
             </div>
             <div className="Button">
-                <button className="Number">8</button>
+                <button onClick={() => printNumber('8')} className="Number">8</button>
             </div>
             <div className="Button">
-                <button className="Number">9</button>
+                <button onClick={() => printNumber('9')} className="Number">9</button>
             </div>
             <div className="Button">
                 <button className="Function">+/-</button>
             </div>
             <div className="Button">
-                <button className="Function">C</button>
+                <button className="Function" onClick={clearEntry}>C</button>
             </div>
             <div className="Button">
-                <button className="Number">4</button>
+                <button className="Number" onClick={() => printNumber('4')}>4</button>
             </div>
             <div className="Button">
-                <button className="Number">5</button>
+                <button className="Number" onClick={() => printNumber('5')}>5</button>
             </div>
             <div className="Button">
-                <button className="Number">6</button>
+                <button className="Number" onClick={() => printNumber('6')}>6</button>
             </div>
             <div className="Button">
-                <button className="Operator">&times;</button>
+                <button className="Operator" onClick={() => selectOperation('multiply')}>&times;</button>
                 
             </div>
             <div className="Button">
-                <button className="Operator">&divide;</button>
+                <button onClick={() => selectOperation('divide')} className="Operator">&divide;</button>
             </div>
             <div className="Button">
-                <button className="Number">1</button>
+                <button className="Number" onClick={() => printNumber('1')}>1</button>
             </div>
             <div className="Button">
-                <button className="Number">2</button>
+                <button onClick={() => printNumber('2')} className="Number">2</button>
             </div>
             <div className="Button">
-                <button className="Number">3</button>
+                <button className="Number" onClick={() => printNumber('3')}>3</button>
             </div>
             <div className="Button">
-                <button className="Operator">-</button>
+                <button className="Operator" onClick={() => selectOperation('subtract')}>-</button>
             </div>
             <div className="Button">
-                <button className="Equals">=</button>
+                <button onClick={() => calculate()} className="Equals">=</button>
             </div>
             <div className="Button">
                 <button onClick={power} className={isOn ? "Power off": "Power on"}>{isOn ? "OFF": "ON"}</button>
             </div>
             <div className="Button">
-                <button className="Number">0</button>
+                <button className="Number" onClick={() => printNumber('0')}>0</button>
             </div>
             <div className="Button">
-                <button className="Number">.</button>
+                <button className="Number" onClick={() => printNumber('.')}>.</button>
             </div>
             <div className="Button">
-                <button className="Operator">+</button>
+                <button className="Operator" onClick={() => selectOperation('add')}>+</button>
             </div>
             <div className="Button"></div>
         </div>
